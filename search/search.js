@@ -1,11 +1,11 @@
 /**
  * PARTYPRESS Browse & Search
  *
- * Uses https://api.partypress.org in production, http://localhost:8000 for local dev.
+ * Uses polsci.uni-wh.de:8073 in production (port forwarding), http://localhost:8073 for local dev.
  */
 const SEARCH_API = (typeof location !== 'undefined' && /^https:\/\/partypress\.org/.test(location.origin))
-  ? 'https://api.partypress.org'
-  : 'http://localhost:8000';
+  ? 'http://polsci.uni-wh.de:8073'
+  : 'http://localhost:8073';
 
 const DOWNLOAD_MAX = 1000;
 const ALL_COLUMNS = ['date', 'country', 'party', 'party_family', 'CAP_issue1', 'title', 'text', 'url', 'date_collected', 'parlgov_party_id'];
