@@ -1,9 +1,11 @@
 /**
  * PARTYPRESS Browse & Search
  *
- * Set SEARCH_API to your backend URL. For local dev: http://localhost:8000
+ * Uses https://api.partypress.org in production, http://localhost:8000 for local dev.
  */
-const SEARCH_API = 'http://localhost:8000';
+const SEARCH_API = (typeof location !== 'undefined' && /^https:\/\/partypress\.org/.test(location.origin))
+  ? 'https://api.partypress.org'
+  : 'http://localhost:8000';
 
 const DOWNLOAD_MAX = 1000;
 const ALL_COLUMNS = ['date', 'country', 'party', 'party_family', 'CAP_issue1', 'title', 'text', 'url', 'date_collected', 'parlgov_party_id'];

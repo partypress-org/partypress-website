@@ -75,8 +75,10 @@
   </footer>
 
   <script>
-    // Set API base (same as SEARCH_API in search/search.js). Update when deploying.
-    const API_BASE = 'http://localhost:8000';
+    // Same logic as SEARCH_API in search/search.js
+    const API_BASE = (typeof location !== 'undefined' && /^https:\/\/partypress\.org/.test(location.origin))
+      ? 'https://api.partypress.org'
+      : 'http://localhost:8000';
     document.getElementById('docs-link').href = API_BASE + '/docs';
   </script>
 </body>
