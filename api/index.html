@@ -37,6 +37,9 @@
 
     <p><a href="#" id="docs-link" class="docs-link" target="_blank" rel="noopener">Open interactive API docs →</a></p>
 
+    <h2>Authentication</h2>
+    <p>All endpoints require an API token. Pass it as a query parameter: <code>?token=YOUR_TOKEN</code>, or as a header: <code>X-API-Token: YOUR_TOKEN</code>. Obtain the token from the project maintainers.</p>
+
     <h2>Endpoints</h2>
 
     <h3><code>GET /list</code></h3>
@@ -67,7 +70,7 @@
     <p>CSV export. Max 1,000 rows. Use <code>cols</code> to select columns. For larger exports, use /list with pagination via <code>next</code>.</p>
 
     <h2>Example</h2>
-    <pre>GET /list?q=climate&country=Germany&fields=date,party,title,text&limit=500</pre>
+    <pre>GET /list?token=YOUR_TOKEN&q=climate&country=Germany&fields=date,party,title,text&limit=500</pre>
     <p>Returns up to 500 results. If <code>total</code> &gt; 500, the response includes <code>next</code> with the URL for the next batch.</p>
   </main>
 
