@@ -148,7 +148,23 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  table-layout: fixed;
 }
+
+.results-table th:nth-child(1),
+.results-table td:nth-child(1) { width: 10%; }   /* Country */
+.results-table th:nth-child(2),
+.results-table td:nth-child(2) { width: 8%; }    /* Date */
+.results-table th:nth-child(3),
+.results-table td:nth-child(3) { width: 10%; }   /* Party */
+.results-table th:nth-child(4),
+.results-table td:nth-child(4) { width: 12%; }   /* Issue */
+.results-table th:nth-child(5),
+.results-table td:nth-child(5) { width: 42%; }   /* Title */
+.results-table th:nth-child(6),
+.results-table td:nth-child(6) { width: 8%; }    /* Show text */
+.results-table th.opt-col,
+.results-table td.opt-col { width: 8%; }
 
 .results-table th,
 .results-table td {
@@ -168,7 +184,8 @@
 }
 
 .results-table .title-cell {
-  max-width: 20rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .results-table .title-cell a {
