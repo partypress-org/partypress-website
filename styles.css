@@ -82,18 +82,10 @@ body {
   color: var(--text);
 }
 .logo-stacked .logo-stacked-img {
-  height: 4rem;
+  height: 5rem;
   width: auto;
+  max-width: 200px;
   display: block;
-}
-.logo-stacked .logo-stacked-text {
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-}
-.logo-stacked .logo-stacked-text .tld {
-  color: var(--muted);
-  font-weight: 400;
 }
 
 main {

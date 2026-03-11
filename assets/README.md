@@ -1,26 +1,22 @@
 # Party Press website assets
 
-## Logo
+## Logo variants
 
-- **partypress-logo.png** — Main logo (symbol + wordmark). Used in the header (inline: logo + “partypress.org” text) and in content (stacked: logo above “partypress.org”).
+- **partypress-horizontal-org-transparent.png** — Horizontal, transparent background. Used in the **header** on all pages.
+- **partypress-stacked-org-transparent.png** — Stacked, transparent background. Used in **hero/content** (e.g. homepage under the title).
+- **partypress-horizontal-org.png** / **partypress-stacked-org.png** — Opaque background versions (kept for reference).
+- **partypress-square.png** — Square (icon only). Source for favicons and app icons; favicon sizes are generated from this so they are not stretched.
+- **partypress-logo.png** — Legacy full logo (symbol + "partypress"); kept for reference.
 
-## Favicons (needs update)
+## Favicons
 
-Favicons should be generated from a **square (1:1)** source so they are not stretched in browser tabs and bookmarks.
+Generated from **partypress-square.png** (1:1) so they display without stretching:
 
-- If the main logo is wide, create a **square logo variant** (e.g. symbol only, or logo centered in a square canvas) and export favicon sizes from that.
-- Current files (favicon-16x16.png, favicon-32x32.png, etc.) may appear stretched until replaced with square-derived versions.
-- Standard sizes: 16×16, 32×32, 48×48; 180×180 (Apple touch); 192×192, 512×512 (PWA).
+- favicon-16x16.png, favicon-32x32.png, favicon-48x48.png
+- favicon-180x180.png (Apple touch), favicon-192x192.png, favicon-512.png (PWA)
 
-## Recommended logo variants
-
-For consistent branding:
-
-1. **Square version** — For favicons and app icons (no stretching).
-2. **Inline version** — Symbol/icon on the left, “partypress.org” on the right (used in header).
-3. **Stacked version** — Symbol/icon on top, “partypress.org” below (used in hero/content).
-4. **Full lockup** — Optional: single image with “partypress.org” included for download/social.
+To regenerate: resize partypress-square.png to each size (e.g. with `sips -z 32 32 partypress-square.png --out favicon-32x32.png` on macOS).
 
 ## site.webmanifest
 
-Web app manifest; icons in the manifest should point to square assets (e.g. 192×192, 512×512).
+Web app manifest; references favicon-192x192.png and favicon-512.png.
