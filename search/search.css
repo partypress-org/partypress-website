@@ -572,3 +572,43 @@
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+/* FAQ at bottom of search page */
+.search-faq {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 48rem;
+}
+
+.search-faq h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.search-faq dl {
+  margin: 0;
+}
+
+.search-faq dt {
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.search-faq dt:first-child {
+  margin-top: 0;
+}
+
+.search-faq dd {
+  margin: 0 0 0 0;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.search-faq code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: var(--bg-soft);
+  border-radius: 4px;
+}

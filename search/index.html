@@ -108,6 +108,16 @@
       </div>
       <div id="pagination" class="pagination"></div>
     </section>
+
+    <section class="search-faq" id="faq">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>I found a bug or bad data. Where do I report it?</dt>
+        <dd>Please open an issue at <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues (partypress_website)</a>. That includes problems with the search site, the data, or the <strong>API</strong>—report API issues there too for now (we may add a separate API repo and issue tracker later). When reporting a problem with a specific press release, please include if you can: the <strong>URL</strong> of the release, the <strong>ParlGov party ID</strong>, and the <strong>date</strong> of the release (as shown in the table). That helps us locate and fix the record quickly.</dd>
+        <dt>I want to donate party press release data. How?</dt>
+        <dd>We welcome contributions. Please provide data in <strong>Parquet or CSV</strong> with at least these columns: <code>date</code>, <code>country</code>, <code>party</code>, <code>title</code>, <code>text</code>. Optional but helpful: <code>url</code>, <code>parlgov_party_id</code>. Your submission should be accompanied by a short <strong>waiver stating that you do not require attribution</strong> (e.g. “I release this data for use in PARTYPRESS without requiring attribution”). We will still try to credit contributors where we can (e.g. on the website or in documentation). Contact us via the same <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues</a> page to arrange a donation.</dd>
+      </dl>
+    </section>
   </main>
 
   <!-- Download modal -->
@@ -134,7 +144,7 @@
   </div>
 
   <footer class="site-footer">
-    <p><a href="/">← Back to partypress.org</a> · <a href="/api/" id="api-docs-page-link">API</a></p>
+    <p><a href="/">← Back to partypress.org</a> · <a href="/api/" id="api-docs-page-link">API</a> · <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">Report an issue</a></p>
   </footer>
 
   <script>
