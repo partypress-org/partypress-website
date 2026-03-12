@@ -111,12 +111,34 @@
 
     <section class="search-faq" id="faq">
       <h2>FAQ</h2>
-      <dl>
-        <dt>I found a bug or bad data. Where do I report it?</dt>
-        <dd>Please open an issue at <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues (partypress_website)</a>. That includes problems with the search site, the data, or the <strong>API</strong>—report API issues there too for now (we may add a separate API repo and issue tracker later). When reporting a problem with a specific press release, please include if you can: the <strong>URL</strong> of the release, the <strong>ParlGov party ID</strong>, and the <strong>date</strong> of the release (as shown in the table). That helps us locate and fix the record quickly.</dd>
-        <dt>I want to donate party press release data. How?</dt>
-        <dd>We welcome contributions. Please provide data in <strong>Parquet or CSV</strong> with at least these columns: <code>date</code>, <code>country</code>, <code>party</code>, <code>title</code>, <code>text</code>. Optional but helpful: <code>url</code>, <code>parlgov_party_id</code>. Your submission should be accompanied by a short <strong>waiver stating that you do not require attribution</strong> (e.g. “I release this data for use in PARTYPRESS without requiring attribution”). We will still try to credit contributors where we can (e.g. on the website or in documentation). Contact us via the same <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues</a> page to arrange a donation.</dd>
-      </dl>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>I found a bug or bad data. Where do I report it?</summary>
+          <div class="faq-answer">
+            <p>Please open an issue at <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues (partypress_website)</a>. That includes problems with the search site, the data, or the <strong>API</strong>. When reporting a problem with a specific press release, please include if you can: the <strong>URL</strong> of the release, the <strong>ParlGov party ID</strong>, and the <strong>date</strong> of the release (as shown in the table). That helps us locate and fix the record quickly.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>I want to donate party press release data. How?</summary>
+          <div class="faq-answer">
+            <p>We welcome contributions. Please provide data as <strong>CSV</strong> with these columns (dates in <strong>YYYY-MM-DD</strong> format):</p>
+            <ul class="faq-cols">
+              <li><code>date</code> — release date</li>
+              <li><code>date_collected</code> — when you scraped/collected the row</li>
+              <li><code>country</code></li>
+              <li><code>party</code></li>
+              <li><code>title</code></li>
+              <li><code>text</code></li>
+              <li><code>url</code> (optional but recommended)</li>
+              <li><code>parlgov_party_id</code> (optional; <a href="https://parlgov.org/">ParlGov</a> party ID)</li>
+            </ul>
+            <p>Example:</p>
+            <pre class="faq-example">date,date_collected,country,party,title,text,url,parlgov_party_id
+2024-03-15,2024-03-20,Germany,SPD,Statement on climate law,"Full text of the press release…",https://example.org/press/123,523</pre>
+            <p>Your submission should be accompanied by a short <strong>waiver stating that you do not require attribution</strong> (e.g. “I release this data for use in PARTYPRESS without requiring attribution”). We will still try to credit contributors where we can (e.g. on the website or in documentation). Contact us via the same <a href="https://github.com/partypress-org/partypress_website/issues" target="_blank" rel="noopener">GitHub Issues</a> page to arrange a donation.</p>
+          </div>
+        </details>
+      </div>
     </section>
   </main>
 
