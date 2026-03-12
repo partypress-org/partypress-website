@@ -679,3 +679,11 @@
   overflow-x: auto;
   white-space: pre;
 }
+
+.faq-waiver {
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--text);
+}
